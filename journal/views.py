@@ -16,7 +16,7 @@ def index(request):
 
 def getAuthToken():
    params = {"grant_type" : "client_credentials"}
-   headers = {"Authorization": "Basic OGVjNWE2N2RhNGExNDg4NWIwZWY4YWJkZDAyMDhlNDk6NTgwZGY0MzI4NmE3NGJjYjk1MDExNjVkYjQzN2IzZTc="}
+   headers = {"Authorization": "Bearer BQCTKaxHhr7CgpKLksP_Wf8oUGZ6Jkib2_aMOQv1tk__xzN-vtLnzuBRSfhQN2rKw7_ICO3XVy3HXitP4mv1ij3we0sMpTTX9_Y4igPCOhFWA-Oh2aJUB5Yq6ENLkhnL-3fb9IOUIQSp_QXIG9XJiO7PRzEBo81LkOmQs-3M9_aHmRPxXpKHUs3lC-aPAnkVtp-QKAWKnMEAv-I_uhC8mgKxlGT_w4MuplMNB5QXlPelc25upkVlACyOnZKLtBQoHk0krpmhqolY"}
    res = unirest.post("https://accounts.spotify.com/api/token", params=params, headers=headers)
    return res.body['access_token']
 
